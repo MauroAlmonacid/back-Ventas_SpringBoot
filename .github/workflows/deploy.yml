@@ -24,7 +24,7 @@ jobs:
 
       - name: Build y Push a ECR
         run: |
-          docker build -t api-ventas .
+          docker build -t api-ventas Springboot-API-REST 
           docker tag api-ventas:latest ${{ secrets.ECR_REPO_URL_VENTAS }}:latest
           docker push ${{ secrets.ECR_REPO_URL_VENTAS }}:latest
 
